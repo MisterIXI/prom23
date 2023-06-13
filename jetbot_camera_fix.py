@@ -14,6 +14,13 @@ counter = 0
 
 # define the callback function
 def callback(data):
+    global counter
+    # if counter smaller than 10, drop the frame, else publish and reset the counter
+    if counter < 5:
+        counter = counter + 1
+    else:
+        counter = 0
+        return
     # convert the image from ROS to OpenCV format
     try:
         cv_image = bridge.imgmsg_to_cv2(data, "bgr8")
@@ -32,14 +39,9 @@ def callback(data):
     except CvBridgeError as e:
         print(e)
     
-    global counter
-    # if counter smaller than 10, drop the frame, else publish and reset the counter
-    if counter < 10:
-        counter = counter + 1
-    else:
-        counter = 0
-        pub.publish(image_message)
-        
+
+    pub.publish(image_message)
+
 # initialize the node
 rospy.init_node('camera_fixed_topic', anonymous=True)
 
@@ -55,5 +57,4 @@ bridge = CvBridge()
 
 # keep the node running
 rospy.spin()
-
 
