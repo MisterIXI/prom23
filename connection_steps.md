@@ -12,7 +12,7 @@
         1. `export TURTLEBOT3_MODEL=waffle`
         1. `export ROS_MASTER_URI=http://[Ubuntu_IP]:11311`
         1. `export ROS_HOSTNAME=[Ubuntu_IP]`
-    1. In the Robot
+    1. In the robot
         1. `export ROS_MASTER_URI=http://[Ubuntu_IP]:11311`
         1. `export ROS_HOSTNAME=[ROBOT_IP]`
 1. In the ROS Ubuntu master

@@ -1,7 +1,7 @@
 # X11 forwarding
 To forward RVIZ and other windows from the Ubuntu Master to the Host Machine.
 If everything is set up correctly you have to do the following steps:
-1. On the Ubuntu Master, run`export DISPLAY=[Host Machine]:0`
+1. On the Ubuntu Master, run `export DISPLAY=[Host Machine]:0`
 ### Windows
 1. On the Host Machine, run XLaunch
     1. Select "One large window"
