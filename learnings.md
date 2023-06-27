@@ -13,3 +13,10 @@ If everything is set up correctly you have to do the following steps:
 - Don't run the robot while it's charging
 - Don't unplug the USB cable of the board. Only the LIDAR is okay to unplug
 - Wait until the robot is signed in and the Desktop is visible before unplugging the HDMI cable
+
+# Create catkin rospy packages
+1. `cd ~/catkin_ws/src`
+1. `catkin_create_pkg [package_name] rospy`
+
+# Potential problem with robot not connecting to rviz correctly
+Change to a different wifi network and try again.
