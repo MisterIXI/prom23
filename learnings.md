@@ -20,3 +20,9 @@ If everything is set up correctly you have to do the following steps:
 
 # Potential problem with robot not connecting to rviz correctly
 Change to a different wifi network and try again.
+
+
+# Debugging tools
+## Topics
+### RQT
+When you run `rqt` on the Ubuntu Master, you can use the plugin: topics->topic monitor to see the topics that are being published and subscribed to.
