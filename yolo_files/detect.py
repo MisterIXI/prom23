@@ -83,15 +83,15 @@ def detect(save_img=False):
     for path, img, im0s, vid_cap in dataset:
         while True:
             #print(f"Imt dimensions before: {img.shape}")
-            print(f"im0s shape: {im0s.shape}")
-            print(f"im0s str: {str(im0s)}")
+            # print(f"im0s shape: {im0s.shape}")
+            # print(f"im0s str: {str(im0s)}")
             
             img = cam.read()
             # img = cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)
-            print(f"Imt dimensions after: {img.shape}")
+            # print(f"Imt dimensions after: {img.shape}")
             im0s = np.copy(img)
             img = np.transpose(img, (2,0,1))
-            print(f"img transposed: {img.shape}")
+            # print(f"img transposed: {img.shape}")
             img = torch.from_numpy(img).to(device)
             # print(f"Torch from numpy complete {str(img)}")
     ###### own changes
