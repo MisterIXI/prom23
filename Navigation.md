@@ -1,14 +1,16 @@
 ## launching navigation with a map file
 ```bash
-roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/yannik/map_new.yaml```
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=/home/[username]/map_new.yaml
+```
 
 
 ## finding the ros locations
 ```bash
-rospack find turtlebot3_navigation```
+rospack find turtlebot3_navigation
+```
 
 ## changing speed values in the folders
-/opt/ros/melodic/share/turtlebot3_navigation/param
+`/opt/ros/melodic/share/turtlebot3_navigation/param`
 
 ## saving a map
 ```bash
