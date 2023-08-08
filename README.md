@@ -1,6 +1,5 @@
-# prom23
-A repo for the Project Management module at TH Bingen containing code to run the modified turtle bot.
-
+# PROM23 - Drunk turtles
+This repository contains the source code and documentation for the project PROM23.  
 
 # Manually installed packages on turtlebot
 ```shell
@@ -54,3 +53,22 @@ This version uses hector instead of normal gmapping since the odometry is broken
 ```bash
 roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=hector
 ```
+
+### Start the camera script (not needed for yolo, just for viewing the camera)
+The provided camera package will take the image from the jetcam package, flip it and drop a few frames to improve performance.  
+Open two terminals and SSH into your robot with both.  
+With one you start the normal jetbot camera package with:
+```bash
+rosrun jetbot_ros jetbot_camera
+```
+
+For the second one you have to start the custom package:
+```bash
+rosrun jetbot_camera_fixed camera_fixed_topic.py
+```
+
+### Show in RVIZ
+To view the streams in RVIZ, you click on "Add" bottom left -> "By topic" tab in the top -> Select the correct Image source.  
+For yolo it is: `/yolo/Image`  
+For the normal camera stream it is: `/jetbot_camera/raw/Image`  
+For the fixed camera stream it is: `/jetbot_camera/image/Image`
